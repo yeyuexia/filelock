@@ -19,11 +19,12 @@ class LockTimeoutException(Exception):
 class FileLock:
     def __init__(
             self, resource, mode, buffering,
-            encoding, errors, newline, timeout, delay
+            encoding, errors, newline, timeout,
+            delay, lock_path
     ):
         self.resource = resource
         self.lock = path.join(
-            path.dirname(path.realpath(resource)),
+            self.get_lock_path(lock_path),
             f".{path.basename(resource)}.lock"
         )
         self.timeout = timeout
@@ -35,6 +36,13 @@ class FileLock:
             errors=errors,
             newline=newline
         )
+
+    def get_lock_path(self, lock_path):
+        if lock_path == ".":
+            return path.dirname(path.realpath(self.resource))
+        else:
+            return path.realpath(lock_path)
+
 
     def __enter__(self):
         waiting_time = 0
