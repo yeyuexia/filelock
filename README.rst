@@ -15,7 +15,7 @@ Use `require` to access local resource.
         f.write("some")
 
 
-`require` support all arguments except `closefd` and `opener` of built-in method `open`(https://docs.python.org/3/library/functions.html?highlight=open#open).
+`require` support all arguments except `closefd` and `opener` of built-in method `open` (https://docs.python.org/3/library/functions.html?highlight=open#open).
 
 And `require` have three more arguments with default value:
 
