@@ -12,9 +12,9 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name="mono-require",
-    version="0.01",
+    version="0.1",
     description="lock the file when access local resource",
-    log_description=long_description,
+    long_description=long_description,
     url="https://github.com/yeyuexia/mono-require",
     author="yeyuexia",
     author_email="yyxworld@gmail.com",
@@ -27,12 +27,9 @@ setup(
 
         'License :: OSI Approved :: MIT License',
 
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
+    keywords='lock when access local file',
     packages=find_packages(),
-    keywords='lock when access local file'
 )
