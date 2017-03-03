@@ -3,6 +3,16 @@ mono-require
 
 Use `mono-require` to access local resource for avoid read/write conflict.
 
+Requirements
+------------
+* Python 3.6+
+* Works on Linux, Windows, Mac OSX, BSD
+
+Install
+-------
+pip::
+  pip install mono-require
+
 Usage
 -----
 
