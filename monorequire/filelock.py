@@ -61,6 +61,8 @@ class FileLock:
                         self.resource, self.timeout
                     )
                 time.sleep(self.delay)
+        if not path.exists(self.resource):
+            open(self.resource, "w")
         self.fd = open(self.resource, **self.open_args)
         return self.fd
 
