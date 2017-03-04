@@ -1,5 +1,7 @@
 mono-require
 ============
+.. image:: https://travis-ci.org/yeyuexia/mono-require.svg?branch=master
+   :target: https://travis-ci.org/yeyuexia/mono-require
 
 Use `mono-require` to access local resource for avoid read/write conflict.
 
@@ -10,7 +12,9 @@ Requirements
 
 Install
 -------
+
 pip::
+
   pip install mono-require
 
 Usage
